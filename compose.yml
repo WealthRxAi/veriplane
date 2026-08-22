@@ -1,0 +1,12 @@
+services:
+  veriplane:
+    build: .
+    ports:
+      - "4317:4317"
+    volumes:
+      - veriplane-data:/data
+    environment:
+      VERIPLANE_INGEST_TOKEN: ${VERIPLANE_INGEST_TOKEN:-}
+
+volumes:
+  veriplane-data:

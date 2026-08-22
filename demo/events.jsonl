@@ -1,0 +1,2 @@
+{"id":"vercel-deploy-481","projectId":"release-demo","source":"vercel","type":"deployment.success","occurredAt":"2026-08-22T01:00:00.000Z","payload":{"nodeId":"release-task","environment":"production","url":"https://example.invalid","summary":"Production deployment succeeded"}}
+{"id":"browser-check-482","projectId":"release-demo","source":"browser-qa","type":"healthcheck.passed","occurredAt":"2026-08-22T01:02:00.000Z","payload":{"nodeId":"release-task","status":200,"latencyMs":184,"summary":"Production returned 200 in 184 ms"}}

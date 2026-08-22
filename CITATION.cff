@@ -1,0 +1,10 @@
+cff-version: 1.2.0
+title: Veriplane
+message: If you use Veriplane in research or an evaluation, please cite this repository.
+type: software
+authors:
+  - name: Veriplane contributors
+repository-code: https://github.com/WealthRxAi/veriplane
+license: Apache-2.0
+version: 0.1.0
+date-released: 2026-08-22

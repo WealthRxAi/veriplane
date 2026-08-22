@@ -1,0 +1,40 @@
+{
+  "project": {
+    "id": "release-demo",
+    "name": "Release demo",
+    "objective": "Ship a release whose deploy and health are independently verified."
+  },
+  "nodes": [
+    {
+      "id": "release-goal",
+      "kind": "goal",
+      "title": "Ship release"
+    },
+    {
+      "id": "release-task",
+      "kind": "task",
+      "title": "Deploy production",
+      "weight": 1,
+      "criteria": [
+        {
+          "id": "deploy",
+          "label": "Production deployment succeeded",
+          "eventType": "deployment.success",
+          "source": "vercel",
+          "match": { "nodeId": "release-task", "environment": "production" }
+        },
+        {
+          "id": "health",
+          "label": "Production health check passed",
+          "eventType": "healthcheck.passed",
+          "source": "browser-qa",
+          "match": { "nodeId": "release-task", "status": 200 },
+          "maxAgeHours": 24
+        }
+      ]
+    }
+  ],
+  "edges": [
+    { "from": "release-goal", "to": "release-task", "relation": "contains" }
+  ]
+}

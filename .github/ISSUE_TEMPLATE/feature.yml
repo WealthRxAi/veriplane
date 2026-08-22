@@ -1,0 +1,33 @@
+name: Feature proposal
+description: Propose a focused improvement or connector
+title: "proposal: "
+labels: [enhancement, needs-triage]
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem
+      description: What project-state problem cannot be solved today?
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Evidence and authority implications
+      description: Which source owns the fact, and what receipt should be trusted?
+    validations:
+      required: true
+  - type: textarea
+    id: shape
+    attributes:
+      label: Proposed shape
+      description: Describe the smallest useful contract or user flow.
+    validations:
+      required: true
+  - type: checkboxes
+    id: help
+    attributes:
+      label: Contribution
+      options:
+        - label: I can help implement this.
+        - label: I can provide scrubbed fixtures or test cases.
